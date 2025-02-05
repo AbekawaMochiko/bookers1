@@ -2,6 +2,13 @@
 
 <%= form_with model: @book do |f| %>
 
+  <% if flash[:success] %>
+    <div class="alert alert-success">
+      <%= flash[:success] %>
+    </div>
+  <% end %>
+
+
   <h4>title</h4>
   <%= f.text_field :title %>
 
